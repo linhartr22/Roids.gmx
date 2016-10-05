@@ -46,6 +46,7 @@
   <objects name="objects">
     <object>objects\objInit</object>
     <object>objects\objGameOver</object>
+    <object>objects\objMasterVolDisp</object>
     <object>objects\objGameOverDisp</object>
     <object>objects\objHighScoresDisp</object>
     <object>objects\objGame</object>
