@@ -54,6 +54,7 @@
     <object>objects\objNumShipsDisp</object>
     <object>objects\objHighScoreDisp</object>
     <object>objects\objDeetDoot</object>
+    <object>objects\objPlayerName</object>
     <object>objects\objPlayer</object>
     <object>objects\objPlayerExplosion</object>
     <object>objects\objPlayerShield</object>

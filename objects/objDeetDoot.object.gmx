@@ -31,7 +31,7 @@ ini_open(game_project_name + ".ini");
 // Use Object Name for INI File Section.
 var strObjName = object_get_name(object_index);
 // Read DeetDoot Interval Timer Min Steps.
-fltDeetDootIntTmrStepsMin = ini_read_real(strObjName,"fltDeetDootIntTmrStepsMin",20);
+fltDeetDootIntTmrStepsMin = ini_read_real(strObjName,"fltDeetDootIntTmrStepsMin",15);
 // Read DeetDoot Interval Timer Max Steps.
 fltDeetDootIntTmrStepsMax = ini_read_real(strObjName,"fltDeetDootIntTmrStepsMax",100);
 // Read DeetDoot Interval Timer Decrease Steps.

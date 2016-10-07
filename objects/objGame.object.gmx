@@ -620,6 +620,10 @@ with (objRoid) {
           <argument>
             <kind>1</kind>
             <string>/// Check High Score.
+// Player Achieved High Score?
+if (score &gt; highscore_value(10) {
+    instance_create(x,y,objPlayerName);
+}
 highscore_add(global.strPlayerName,score);
 
 </string>
