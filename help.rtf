@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
-{\colortbl ;\red0\green128\blue0;\red255\green128\blue128;\red255\green255\blue255;\red221\green221\blue221;\red128\green255\blue128;\red255\green255\blue0;}
+{\colortbl ;\red0\green128\blue0;\red255\green128\blue128;\red255\green255\blue255;\red0\green255\blue255;\red255\green255\blue0;\red221\green221\blue221;\red128\green255\blue128;\red128\green128\blue255;\red128\green255\blue0;}
 \viewkind4\uc1\pard\cf1\b\fs20 Roids\par
 \cf2 Version \cf3\b0 : 1.0.0\par
 \cf2\b Date \cf3\b0 : September 11, 2016\par
@@ -8,76 +8,231 @@
 \cf1\b Description\cf3\b0\par
 The goal of this exercise is to achieve a high score by destroying Roids!\par
 \par
-You have been supplied with three ships. Each ship can rotate left and right and thrust in the direction it is pointed. Station keeping thrusters will slowly reduce its speed, eventually bringing it to a full stop.\par
+You have been supplied three ships. Each ship can rotate left and right and thrust in the direction it is pointed. Station keeping thrusters will slowly reduce its speed, eventually bringing it to a full stop.\par
 \par
-Each ship is equipped with a main gun that fires a bullet in the same direction the ship faces. The main gun has an unlimited supply of bullets but your ship's tracking computer will limit the number of bullets you can fire. The tracking computer uses the bullet self-destruct mechanism to limit their range. This reduces the tracking computer power requirements and keeps you from taking one of your own up the tailpipe.\par
+Each ship is equipped with a shield that provides temporary invulnerability. The shield is powered by a battery. Activating the shield drains the battery quickly and it recharges slowly so use it sparingly. If you discharge the battery too far the shield will not activate again until the battery has sufficiently recovered. \par
 \par
-Striking a Roid with a bullet or, while not recommended, with your ship, results in the destruction of both and increases your score. Larger Roids are less challenging to strike and grant a smaller reward. Striking a Roid breaks it into two smaller Roids. Eventually a Roid becomes so small it is completely vaporized.\par
+Each ship is equipped with a main gun that fires a bullet in the same direction the ship faces. The main gun has an unlimited supply of bullets but the ship's tracking computer will limit the number of bullets it can fire. The tracking computer uses the bullet self-destruct mechanism to limit their range. This reduces the tracking computer power requirements and keeps the ship from taking one of its own bullets up the tailpipe.\par
 \par
-When all the Roids are destroyed you'll be warped to the next sector. Upon disengaging the warp drive the ship experiences momentarily invulnerability. This effect quickly dissipates as the warp field collapses and the ship transitions back to normal space. During this time you should manuever the ship to a clear area to prevent a reentry collision. You'll notice each sector begins with more Roids than its predecessor. \par
+Hitting a Roid with a bullet or, while not recommended, with the ship, results in the destruction of both and increases your score. Larger Roids are less challenging to hit and grant a smaller reward. Hitting a Roid splits it into two smaller Roids. Eventually a Roid becomes so small it is completely vaporized.\par
+\par
+When all the Roids are destroyed the ship will be warped to the next sector. As the warp envelope dissipates, the ship experiences momentarily invulnerability. During this time watch for opportunities to manuever the ship to a clear area, preventing a reentry collision. The effect dissipates eventually or immediately if you fire your main engine or main gun or activate the shield. You'll notice each sector begins with more Roids than its predecessor. \par
 \par
 If a ship is destroyed and you have exhausted your supply of ships the game is over. Otherwise another ship will warp to the predecessor's location. \par
-\cf1\b\par
+\par
+\cf1\b Controls\par
+\cf4 In Game\cf1\par
+\cf2 <Left>\cf3\b0\tab\tab\tab\tab Rotate Ship Counter-Clockwise.\cf2\b\par
+<Right>\cf3\b0\tab\tab\tab Rotate Ship Clockwise.\cf2\b\par
+<Up>\cf3\b0\tab\tab\tab\tab Fire Main Engine.\cf2\b\par
+<Down>\cf3\b0\tab\tab\tab Engage Shields.\cf2\b\par
+<Space>\cf3\b0\tab\tab\tab Fire Main Gun.\cf2\b\par
+<PageUp>\cf3\b0\tab\tab\tab Volume Up.\cf2\b\par
+<PageDown>\cf3\b0\tab\tab\tab Volume Down.\cf2\b\par
+<Alt>+<PageUp>\cf3\b0\tab\tab Game Window Style: Full Screen.\cf2\b\par
+<Ald>+<PageDown>\cf3\b0\tab\tab Game Window Style: Windowed.\par
+\cf4\b High Score\cf1\par
+\cf2 <Left>\cf3\b0\tab\tab\tab\tab Move Position to Previous Position.\cf2\b\par
+<Right>\cf3\b0\tab\tab\tab Move Position to Next Position.\cf2\b\par
+<Up>\cf3\b0\tab\tab\tab\tab Select Next Character.\cf2\b\par
+<Down>\cf3\b0\tab\tab\tab Select Previous Character.\cf2\b\par
+<Space>\cf3\b0\tab\tab\tab Accept Entry at Position.\cf2\b\par
+\cf1\par
 Rooms\par
-\cf2 rmGame\cf4\b0  : Roid Game.\par
-\tab\cf2\b Objects \cf4\b0 : \cf2\b obj_MCP\cf4\b0\par
+\cf5 rmGame\cf3\b0\tab\tab\tab\cf6 Roid Game Initial Room.\par
+\cf4\b Objects\cf2\tab\cf3\b0\tab\tab\tab\cf5\b obj_MCP\cf6\b0\par
 \par
-\cf1\b Sprites\cf5\par
-\cf2 sprLife \cf4\b0 : Life Counter Display.\par
-\cf2\b sprPlayerEngineOff \cf4\b0 : Player Engine Off Loop.\par
-\cf2\b sprPlayerEngineOn \cf4\b0 : Player Engine On Loop.\par
-\cf2\b sprPlayerExplosion \cf4\b0 : Player Explosion Animation.\par
-\cf2\b sprPlayerShield \cf4\b0 : Player Shield.\par
-\cf2\b sprBullet \cf4\b0 : Main Gun Bullet.\par
-\cf2\b sprRoidBig \cf4\b0 : Big Roid.\par
-\cf2\b sprRoidMed \cf4\b0 : Medium Roid.\par
-\cf2\b sprRoidSml \cf4\b0 : Small Roid.\par
+\cf1\b Sprites\cf7\par
+\cf5 sprLife\cf3\b0\tab\tab\tab\tab\cf6 Life Counter Display.\par
+\cf5\b sprPlayerEngineOff\cf3\b0\tab\tab\cf6 Player Engine Off Loop.\par
+\cf5\b sprPlayerEngineOn\cf3\b0\tab\tab\cf6 Player Engine On Loop.\par
+\cf5\b sprPlayerExplosion\cf3\b0\tab\tab\cf6 Player Explosion Animation.\par
+\cf5\b sprPlayerShield\cf3\b0\tab\tab\cf6 Player Shield.\par
+\cf5\b sprBullet\cf3\b0\tab\tab\tab\cf6 Main Gun Bullet.\par
+\cf5\b sprRoidBig\cf3\b0\tab\tab\tab\cf6 Big Roid.\par
+\cf5\b sprRoidMed\cf3\b0\tab\tab\tab\cf6 Medium Roid.\par
+\cf5\b sprRoidSml\cf3\b0\tab\tab\tab\cf6 Small Roid.\par
+\cf5\b sprEnemyBig\cf3\b0\tab\tab\tab\cf6 Big Enemy.\par
+\cf5\b sprEnemySml\cf3\b0\tab\tab\tab\cf6 Small Enemy.\par
 \par
-\cf1\b Sounds\cf4\b0\par
-\cf2\b sndEngineLoop \cf4\b0 : Player Ship Engine On Loop.\par
-\cf2\b sndBulletFire \cf4\b0 : Player Ship Main Gun Bullet Firing.\par
-\cf2\b sndRoidBig \cf4\b0 : Big Asteroid Explosion.\par
-\cf2\b sndRoidMed \cf4\b0 : Medium Asteroid Explosion.\par
-\cf2\b sndRoidSml \cf4\b0 : Small Asteroid Explosion.\par
+\cf1\b Sounds\cf6\b0\par
+\cf5\b sndBeat01\cf3\b0\tab\tab\tab\cf6 DeetDoot.\cf2\b\par
+\cf5 sndBeat02\cf3\b0\tab\tab\tab\cf6 DeetDoot.\cf2\b\par
+\cf5 sndPlayerEngLoop\cf3\b0\tab\tab\cf6 Player Engine On Loop.\par
+\cf5\b sndPlayerExplosion\cf3\b0\tab\tab\cf6 Player Ship Explosion.\par
+\cf5\b sndPlayerShldNak01\cf3\b0\tab\tab\cf6 Player Shield NAK 01.\par
+\cf5\b sndPlayerShldNak02\cf3\b0\tab\tab\cf6 Player Shield NAK 02.\par
+\cf5\b sndPlayerShldNak03\cf3\b0\tab\tab\cf6 Player Shield NAK 03.\par
+\cf5\b sndPlayerBulletFire\cf3\b0\tab\tab\cf6 Player Main Gun Bullet Firing.\par
+\cf5\b sndRoidBig\cf3\b0\tab\tab\tab\cf6 Big Asteroid Explosion.\par
+\cf5\b sndRoidMed\cf3\b0\tab\tab\tab\cf6 Medium Asteroid Explosion.\par
+\cf5\b sndRoidSml\cf3\b0\tab\tab\tab\cf6 Small Asteroid Explosion.\par
+\cf5\b sndEnemyBig\cf3\b0\tab\tab\tab\cf6 Big Enemy.\par
+\cf5\b sndEnemySml\cf3\b0\tab\tab\tab\cf6 Small Enemy.\par
 \par
-\cf1\b Fonts\cf4\b0\par
-\cf2\b fntBig \cf4\b0 : Player Score Display.\par
-\cf2\b fntSml \cf4\b0 : High Score and Player Name Display.\par
+\cf1\b Backgrounds\cf6\b0\par
+\cf5\b bgSpacefield01\cf3\b0\tab\tab\cf6 Game Background.\par
+\cf1\b\par
+Scripts\par
+\cf8 scrAddHighScorePlayerName\cf3\b0\tab\cf6 Add High Score and Player Name to Highscores.\cf1\b\par
+\cf8 scrPlayerNameNextChar\cf3\b0\tab\cf6 Set Next Character at Character Position.\cf1\b\par
+\cf8 scrPlayerNamePrevChar\cf3\b0\tab\cf6 Set Previous Character at Character Position.\par
+\cf8\b scrSpawnRoids\cf3\b0\tab\tab\cf6 Set Next Character at Character Position.\cf1\b\par
+\cf8 scrOverridePlayerInvTmr\cf3\b0\tab\cf6 Override Player Invincible Timer.\cf1\b\par
+\par
+Fonts\cf6\b0\par
+\cf5\b fntRoids\cf3\b0\tab\tab\tab\cf6 Huge Font.\par
+\cf5\b frnBig\cf3\b0\tab\tab\tab\tab Big \cf6 Font.\par
+\cf5\b fntSml\cf3\b0\tab\tab\tab\tab Small Font.\cf6\par
 \par
 \cf1\b Objects\par
-\cf6 objMCP \cf4\b0 : Master Control Program (MCO (Master Control Object) just doesn't have the same zip to it).\par
- \tab\cf2\b global.strPlayerName \cf4\b0 : Player Name.\par
- \tab\cf2\b global.intGameLevel \cf4\b0 : Game Level. Determines number of Asteroids Spawned at the start of Game Level.\par
- \tab\cf2\b Create \cf4\b0 : Read Constants from INI File. Set Alarm and User Event Names. Create Displays.\par
- \tab\cf2\b Game Start \cf4\b0 : Reset Game Level. Create Player.\par
-\tab\cf2\b No More Lives \cf4\b0 : Check High Score and Create Game Over Display.\par
-\tab\cf2\b press Q-key \cf4\b0 : End Game.\par
-\tab\cf2\b press R-key \cf4\b0 : Restart Game.\par
+\cf5 objMCP\cf3\b0\tab\tab\tab\cf6 Master Control Program (MCO (Master Control Object) just doesn't have the same zip to it).\cf4\b\par
+vars\cf3\b0\par
+\cf2\b eHBAnchorDirNames\cf3\b0\tab\tab Global Health Bar Anchor Direction Names\cf6 . \cf2\b dirLeft\cf3\b0 ,\cf2\b  dirRight\cf3\b0 ,\cf2\b  dirTop\cf3\b0 ,\cf2\b  dirBottom\cf6\b0 .\par
+\cf2\b score\cf3\b0\tab\tab\tab\tab GML \cf6 score.\cf4\b\par
+Fonts\cf3\b0\tab\tab\tab\tab <None>.\par
+\cf4\b Scripts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
+Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
+\cf4\b Visible\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Persistent\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Solid\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Uses Physics\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Depth\cf3\b0\tab\tab\tab\tab\cf6 0.\par
+\cf4\b Parent\cf3\b0\tab\tab\tab\tab\cf6 <no parent>.\par
+\cf4\b Mask\cf3\b0\tab\tab\tab\tab\cf6 <same as sprite>.\par
+\cf4\b Children\cf3\b0\tab\tab\tab\cf6 <None>.\cf4\b\par
+\cf9 Create\cf3\b0\tab\tab\tab\tab\cf6 Create Health Bar Anchor Direction Names.\par
+\cf3\tab\tab\tab\tab\cf6 Init Score for First Game.\par
+\cf3\tab\tab\tab\tab\cf6 Create Game Window Style Display.\par
+\cf3\tab\tab\tab\tab\cf6 Create Master Volume Display.\par
+\cf3\tab\tab\tab\tab\cf6 Create Game Over State.\par
+\cf9\b Destroy\cf4\tab\cf3\b0\tab\tab\tab\cf6 Destroy Game Window Style Display.\par
+\cf3\tab\tab\tab\tab\cf6 Destroy Master Volume Display.\par
 \par
-\cf6\b objScore \cf4\b0 : Player Score Display. Uses GM Score Actions.\par
-\tab\cf2\b Font \cf4\b0 : \cf2\b fntBig\cf4\b0 .\par
-\tab\cf2\b Depth \cf4\b0 : 10.\par
-\tab\cf2\b Game Start \cf4\b0 : Reset Score.\par
-\tab\cf2\b Draw \cf4\b0 : Display Score.\par
+\cf5\b objGameWinStyleDisp\tab\cf3\b0\tab Game Window Style Display.\par
+\cf4\b vars\cf6\b0\par
+\cf2\b boolGameWindowStyle\cf3\b0\tab Game Window Style. true = Fullscreen, false = Windowed.\cf2\b\par
+\cf4 Fonts\cf3\b0\tab\tab\tab\tab <None>.\par
+\cf4\b Scripts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
+Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
+\cf4\b Visible\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Persistent\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Solid\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Uses Physics\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Depth\cf3\b0\tab\tab\tab\tab\cf6 0.\par
+\cf4\b Parent\cf3\b0\tab\tab\tab\tab\cf6 <no parent>.\par
+\cf4\b Mask\cf3\b0\tab\tab\tab\tab\cf6 <same as sprite>.\par
+\cf4\b Children\cf3\b0\tab\tab\tab\cf6 <None>.\cf4\b\par
+\cf9 Create\cf3\b0\tab\tab\tab\tab Read Config Values from INI File.\par
+\tab\tab\tab\tab Set Game Window Style.\cf5\b\par
+\cf9 Game End\cf3\b0\tab\tab\tab\cf6 Write Config Values to INI File.\par
+\cf9\b press <Alt>+<PageUp>\cf3\b0\tab Set Game Window Style Fullscreen.\cf4\b\tab\tab\tab\cf2\par
+\cf9 press <Alt>+<PageDown>\cf3\b0\tab Set Game Window Style Windowed.\cf2\b\par
 \par
-\cf6\b objNumShips \cf4\b0 : Player Number of Ships Display. Uses GM Life Actions.\par
-\tab\cf2\b Sprite \cf4\b0 : \cf2\b sprLife\cf4\b0 .\par
-\tab\cf2\b Depth \cf4\b0 : 10.\par
-\tab\cf2\b Create \cf4\b0 : Read Constants from INI File.\par
-\tab\cf2\b Game Start \cf4\b0 : Reset Number of Ships (Lives).\par
-\tab\cf2\b Draw \cf4\b0 : Draw Number of Ships (Lives) as image.\par
+\cf5 objMasterVolDisp\cf3\b0\tab\tab Master Volume Display.\par
+\cf4\b vars\cf6\b0\par
+\cf2\b fltAudioMasterGain\cf3\b0\tab\tab Audio Master Gain. 1 = Loudest, 0 = Silent.\cf2\b\par
+intDispColour\cf3\b0\tab\tab\tab Display Colour. \cf2\b c_white\cf3\b0 .\cf2\b\par
+intDispTmrStepsInit\cf3\b0\tab\tab Display Timer Steps Initial. \cf2\b 60\cf3\b0 .\cf2\b\par
+fltMasterVolInc\cf3\b0\tab\tab\tab Master Volume Increment. \cf2\b 0.05\cf3\b0 .\cf2\b\par
+\cf4 Fonts\cf3\b0\tab\tab\tab\tab\cf5\b fntSml\cf3\b0 .\cf4\b\par
+Scripts\cf3\b0\tab\tab\tab\tab\cf8\b scrDrawBarGauge\cf3\b0 .\cf4\b\par
+Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
+\cf4\b Visible\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Persistent\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Solid\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Uses Physics\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Depth\cf3\b0\tab\tab\tab\tab\cf6 -20.\par
+\cf4\b Parent\cf3\b0\tab\tab\tab\tab\cf6 <no parent>.\par
+\cf4\b Mask\cf3\b0\tab\tab\tab\tab\cf6 <same as sprite>.\par
+\cf4\b Children\cf3\b0\tab\tab\tab\cf6 <None>.\cf4\b\par
+\cf9 Create\cf3\b0\tab\tab\tab\tab Read Config Values from INI File.\par
+\tab\tab\tab\tab Set Audio Master Gain.\cf5\b\par
+\cf9 Alarm 0\cf3\b0\tab\tab\tab Hide Master Volume Display Timer.\par
+\tab\tab\tab\tab Set Master Volume Display visible to false.\cf5\b\par
+\cf9 Game End\cf3\b0\tab\tab\tab\cf6 Write Config Values to INI File.\par
+\cf9\b Draw\cf3\b0\tab\tab\tab\tab Draw Master Volume Display\cf6 .\par
+\cf9\b press <PageUp>\cf3\b0\tab\tab Increase Audio Master Gain by Master Volume Increment.\par
+\tab\tab\tab\tab Set visible to true.\par
+\tab\tab\tab\tab Set Alarm 0 to Display Timer Steps Initial. \cf2\b\par
+\cf9 press <PageDown>\cf3\b0\tab\tab Decrease Audio Master Gain by Master Volume Increment.\par
+\tab\tab\tab\tab Set visible to true.\par
+\tab\tab\tab\tab Set Alarm 0 to Display Timer Steps Initial.\tab\tab\tab\tab\cf2\b\par
 \par
-\cf6\b objHighScore \cf4\b0 : High Score and Name Display. Uses GM HighScore Actions.\par
-\tab\cf2\b Font \cf4\b0 : \cf2\b fntSml\cf4\b0 .\par
-\tab\cf2\b Depth \cf4\b0 : 10.\par
-\tab\cf2\b Draw \cf4\b0 : Display Player High Score and Name.\par
+\cf5 objGameOver\cf3\b0\tab\tab\tab\cf6 Game Over.\par
+\cf4\b vars\cf6\b0\par
+\cf2\b highscore_value(10)\cf3\b0\tab\tab GML High Score Value Number 10.\cf2\b\par
+score\cf3\b0\tab\tab\tab\tab\cf6 GML score.\cf4\b\par
+Fonts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
+Scripts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
+Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
+\cf4\b Visible\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Persistent\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Solid\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Uses Physics\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Depth\cf3\b0\tab\tab\tab\tab\cf6 0.\par
+\cf4\b Parent\cf3\b0\tab\tab\tab\tab\cf6 <no parent>.\par
+\cf4\b Mask\cf3\b0\tab\tab\tab\tab\cf6 <same as sprite>.\par
+\cf4\b Children\cf3\b0\tab\tab\tab\cf6 <None>.\cf4\b\par
+\cf9 Create\cf3\b0\tab\tab\tab\tab If Player Beat High Score Number 10 Then Create Get Player Name Display.\par
+\tab\tab\tab\tab Else Create Game Over Display.\par
+\tab\tab\tab\tab Create High Scores Display.\par
+\cf9\b Destroy\cf3\b0\tab\tab\tab\tab Destroy Game Over Display.\par
+\tab\tab\tab\tab Destroy High Scores Display.\cf5\b\par
+\cf9 press <Escape>\cf3\b0\tab\tab End the game.\cf2\b\par
+\cf9 press <S>\cf3\b0\tab\tab\tab Transition Game Over to Game Playing.\cf2\b\par
+\cf6\b0\par
+\cf5\b objGetPlayerNameDisp\cf3\b0\tab Get Player Name Display.\par
+\cf4\b vars\cf6\b0\par
+\cf2\b intDispColour\cf3\b0\tab\tab\tab Display Colour. \cf2\b c_white\cf3\b0 .\cf2\b\par
+strPlayerName\cf3\b0\tab\tab\tab Player Name. \cf2\b "AAA"\cf3\b0 .\cf2\b\par
+fltKeyRepeatTmrStepsInit\cf3\b0\tab Keypress Repeat Timer Steps Initial. \cf2\b 30\cf3\b0 .\cf2\b\par
+fltKeyRepeatTmrStepsRep\cf3\b0\tab Keypress Repeat Timer Steps Repeat. \cf2\b 7\cf3\b0 .\cf2\b\par
+intCharPos\cf3\b0\tab\tab\tab Character Position. \cf2\b 0\cf3\b0 .\cf2\b\par
+astrCharPosInd[4]\cf3\b0\tab\tab Character Position Indicators.\cf2\b\par
+intCharASCIIMin\cf3\b0\tab\tab Character ASCII Min. \cf2\b "A"\cf3\b0 .\cf2\b\par
+intCharASCIIMax\cf3\b0\tab\tab Character ASCII Max. \cf2\b "Z"\cf3\b0 .\cf2\b\par
+score\cf3\b0\tab\tab\tab\tab\cf6 GML score.\cf4\b\par
+Fonts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
+Scripts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
+Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
+\cf4\b Visible\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Persistent\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Solid\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Uses Physics\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Depth\cf3\b0\tab\tab\tab\tab\cf6 0.\par
+\cf4\b Parent\cf3\b0\tab\tab\tab\tab\cf6 <no parent>.\par
+\cf4\b Mask\cf3\b0\tab\tab\tab\tab\cf6 <same as sprite>.\par
+\cf4\b Children\cf3\b0\tab\tab\tab\cf6 <None>.\cf4\b\par
+\cf9 Create\cf3\b0\tab\tab\tab\tab Read Config Values from INI File.\par
+\tab\tab\tab\tab Create Local Variables.\par
+\tab\tab\tab\tab Add High Score without Player Name.\par
+\cf9\b Alarm 0\cf3\b0\tab\tab\tab Keypress Repeat Timer.\par
+\tab\tab\tab\tab If <Up> Key Pressed Then Get Next Character at Character Position.\par
+\tab\tab\tab\tab Else If <Down> Key Pressed Then Get Previous Character at Character Position.\par
+\tab\tab\tab\tab Set Alarm 0 to \cf5\b\par
+\cf9 Game End\cf3\b0\tab\tab\tab Add High Score with Player Name.\cf2\b\par
+\cf9 press <S>\cf3\b0\tab\tab\tab Transition Game Over to Game Playing.\cf2\b\par
+\cf5\par
+objScore \cf6\b0 : Player Score Display. Uses GM Score Actions.\par
+\tab\cf2\b Font \cf6\b0 : \cf2\b fntBig\cf6\b0 .\par
+\tab\cf2\b Depth \cf6\b0 : 10.\par
+\tab\cf2\b Game Start \cf6\b0 : Reset Score.\par
+\tab\cf2\b Draw \cf6\b0 : Display Score.\par
 \par
-\cf6\b objGameOver \cf4\b0 : Game Over Display.\par
-\tab\cf2\b Font \cf4\b0 : \cf2\b fntBig\cf4\b0 .\par
-\tab\cf2\b Depth \cf4\b0 : 10\par
-\tab\cf2\b Draw \cf4\b0 : Display Game Over.\par
+\cf5\b objNumShips \cf6\b0 : Player Number of Ships Display. Uses GM Life Actions.\par
+\tab\cf2\b Sprite \cf6\b0 : \cf2\b sprLife\cf6\b0 .\par
+\tab\cf2\b Depth \cf6\b0 : 10.\par
+\tab\cf2\b Create \cf6\b0 : Read Constants from INI File.\par
+\tab\cf2\b Game Start \cf6\b0 : Reset Number of Ships (Lives).\par
+\tab\cf2\b Draw \cf6\b0 : Draw Number of Ships (Lives) as image.\par
 \par
-\cf6\b objPlayer \cf4\b0 : Player's Ship.\par
+\cf5\b objHighScore \cf6\b0 : High Score and Name Display. Uses GM HighScore Actions.\par
+\tab\cf2\b Font \cf6\b0 : \cf2\b fntSml\cf6\b0 .\par
+\tab\cf2\b Depth \cf6\b0 : 10.\par
+\tab\cf2\b Draw \cf6\b0 : Display Player High Score and Name.\par
+\par
+\cf5\b objPlayer \cf6\b0 : Player's Ship.\par
   Sprite : sprShipEngineOff.\par
   Depth : 0.\par
   Create : Set Ship Engine Off Sprite and Animation Speed. Set Ship Constants. Create Main Gun.\par
@@ -90,13 +245,13 @@ Rooms\par
   Press <Up> : Set Engine On Sprite and Start Engine Sound.\par
   Release <Up> : Set Engine Off Sprite and Stop Engine Sound.\par
 \par
-\cf2\b objMainGun \cf4\b0 : Player Ship Main Gun.\par
+\cf2\b objMainGun \cf6\b0 : Player Ship Main Gun.\par
   Create : Set Main Gun Constants and Bullet Loaded.\par
   Alarm 0 : If Bullets Left, Set Bullet Loaded, otherwise Set 1 in Alarm 0 (wait for Bullet to Expire).\par
   <Space> : If Bullet Loaded, Create Bullet, Play Gun Fire Sound, Clear Bullet Loaded and Set Reload Delay \par
     Count in Alarm 0.\par
 \par
-\cf2\b objBullet \cf4\b0 : Main Gun Bullet.\par
+\cf2\b objBullet \cf6\b0 : Main Gun Bullet.\par
   Sprite : sprBullet.\par
   Depth : 0.\par
   Create : Set Bullet Direction from Ship Direction and Speed. Set Bullet Constants. Set Bullet Distance \par
@@ -105,26 +260,26 @@ Rooms\par
   Collision Asteroid : Destroy Bullet and Asteroid.\par
   Outside Room : Wrap in both directions.\par
 \par
-\cf2\b objRoid \cf4\b0 : Asteroid Parent.\par
+\cf2\b objRoid \cf6\b0 : Asteroid Parent.\par
   Create : Set Roid Constants. Pick Random Roid Image, Direction, Speed and Image Angle.\par
   Destroy : Add Roid Score (from child Roid).\par
   Outside Room : Wrap in both directions.\par
 \par
-\cf2\b objRoidBig \cf4\b0 : Big Asteroid.\par
+\cf2\b objRoidBig \cf6\b0 : Big Asteroid.\par
   Sprite : sprRoidBig.\par
   Depth : 4.\par
   Parent : objRoid.\par
   Create : Call the inherited event. Set Big Asteroid Score.\par
   Destroy : Call the inherited event. Play Big Asteroid Sound. Spawn 2x Medium Asteroids.\par
 \par
-\cf2\b objRoidMed \cf4\b0 : Medium Asteroid.\par
+\cf2\b objRoidMed \cf6\b0 : Medium Asteroid.\par
   Sprite : sprRoidMed.\par
   Depth : 6.\par
   Parent : objRoid.\par
   Create : Call the inherited event. Set Medium Asteroid Score.\par
   Destroy : Call the inherited event. Play Medium Asteroid Sound. Spawn 2x Small Asteroids.\par
 \par
-\cf2\b objRoidSml \cf4\b0 : Small Asteroid.\par
+\cf2\b objRoidSml \cf6\b0 : Small Asteroid.\par
   Sprite : sprRoidSml.\par
   Depth : 8.\par
   Parent : objRoid.\par
@@ -132,38 +287,39 @@ Rooms\par
   Destroy : Call the inherited event. Play Small Asteroid Sound.\par
 \par
 \cf1\b Alarms\par
-\cf2 Alarm 0 \cf4\b0 : Main Gun Reload Delay (objMainGun)\par
-\cf2\b Alarm 1 \cf4\b0 : Bullet Distance (objBullet)\par
-\cf2\b Alarm 2 \cf4\b0 : Level Respawn Delay (objMCP)\par
-\cf2\b Alarm 3 \cf4\b0 : Ship Respawn Delay (objShipExplode)\par
+\cf2 Alarm 0 \cf6\b0 : Main Gun Reload Delay (objMainGun)\par
+\cf2\b Alarm 1 \cf6\b0 : Bullet Distance (objBullet)\par
+\cf2\b Alarm 2 \cf6\b0 : Level Respawn Delay (objMCP)\par
+\cf2\b Alarm 3 \cf6\b0 : Ship Respawn Delay (objShipExplode)\par
 \par
-\cf1\b User Events\cf4\b0\par
+\cf1\b User Events\cf6\b0\par
 \par
 \cf1\b Misc\par
-\cf2 alrm \cf4\b0 : Alarm Name.\par
-\cf2\b bg \cf4\b0 : Background Resource.\par
-\cf2\b bool \cf4\b0 : Boolean Variable. Use true or false values. 32 bit floating point. \par
-\cf2\b dec \cf4\b0 : Decrement (decrease by 1).\par
-\cf2\b deeg \cf4\b0 : In GameMaker 0 degrees is East, 90 degrees is North, 180 degrees is West and 270 degrees is South.\par
-\cf2\b depth \cf4\b0 : lower numbers are closer to the player and are drawn on top of higher numbers which are farther away.\par
-\cf2\b e\cf4\b0  : Enumerated List of Constants.\par
-\cf2\b fnt \cf4\b0 : Font Resource.\par
-\cf2\b inc \cf4\b0 : Increment (increase by 1).\par
-\cf2\b int \cf4\b0 : Integer Variable. 32 bit floating point.\par
-\cf2\b obj \cf4\b0 : Object.\par
-\cf2\b flt \cf4\b0 : Real Variable. 32 bit floating point.\par
-\cf2\b rm \cf4\b0 : Room.\par
-\cf2\b snd \cf4\b0 : Sound Resource.\par
-\cf2\b spr \cf4\b0 : Sprite Resource.\par
-\cf2\b step \cf4\b0 : Engine Processing Interval.\par
-\cf2\b str \cf4\b0 : String Variable.\par
-\cf2\b uev \cf4\b0 : User Event Name.\par
+\cf2 a \cf6\b0 : Array.\par
+\cf2\b alrm \cf6\b0 : Alarm Name.\par
+\cf2\b bg \cf6\b0 : Background Resource.\par
+\cf2\b bool \cf6\b0 : Boolean Variable. Use true or false values. 32 bit floating point. \par
+\cf2\b dec \cf6\b0 : Decrement (decrease by 1).\par
+\cf2\b deeg \cf6\b0 : In GameMaker 0 degrees is East, 90 degrees is North, 180 degrees is West and 270 degrees is South.\par
+\cf2\b depth \cf6\b0 : lower numbers are closer to the player and are drawn on top of higher numbers which are farther away.\par
+\cf2\b e\cf6\b0  : Enumerated List of Constants.\par
+\cf2\b fnt \cf6\b0 : Font Resource.\par
+\cf2\b inc \cf6\b0 : Increment (increase by 1).\par
+\cf2\b int \cf6\b0 : Integer Variable. 32 bit floating point.\par
+\cf2\b obj \cf6\b0 : Object.\par
+\cf2\b flt \cf6\b0 : Real Variable. 32 bit floating point.\par
+\cf2\b rm \cf6\b0 : Room.\par
+\cf2\b snd \cf6\b0 : Sound Resource.\par
+\cf2\b spr \cf6\b0 : Sprite Resource.\par
+\cf2\b step \cf6\b0 : Engine Processing Interval.\par
+\cf2\b str \cf6\b0 : String Variable.\par
+\cf2\b uev \cf6\b0 : User Event Name.\par
 \par
 Important constants are typically defined in an objects Create event. Some constants can be changed by creating an entry in a config.ini file. Windows users will find the file in %localappdata%\\Roids. The object name is used for the config.ini file section name and the variable name is the key. For example, to display the game in Windowed mode:\par
 [objMCP]\par
 intFullScreen="0"\par
 \par
-\cf1\b Issues\cf4\b0\par
+\cf1\b Issues\cf6\b0\par
 \par
 }
  

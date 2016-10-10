@@ -407,7 +407,7 @@ ini_close();
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>sndPlayerEngineLoop</sound>
+            <sound>sndPlayerEngLoop</sound>
           </argument>
         </arguments>
       </action>
@@ -1281,7 +1281,7 @@ ini_close();
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>sndPlayerEngineLoop</sound>
+            <sound>sndPlayerEngLoop</sound>
           </argument>
           <argument>
             <kind>3</kind>
@@ -1573,7 +1573,7 @@ ini_close();
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>sndPlayerEngineLoop</sound>
+            <sound>sndPlayerEngLoop</sound>
           </argument>
         </arguments>
       </action>

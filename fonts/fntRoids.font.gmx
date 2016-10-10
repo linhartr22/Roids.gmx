@@ -13,20 +13,40 @@
     <texgroup0>0</texgroup0>
   </texgroups>
   <ranges>
-    <range0>33,33</range0>
-    <range0>68,68</range0>
-    <range0>73,73</range0>
-    <range0>79,79</range0>
-    <range0>82,83</range0>
+    <range0>32,33</range0>
+    <range0>65,90</range0>
+    <range0>95,95</range0>
   </ranges>
   <glyphs>
     <glyph character="32" x="2" y="2" w="51" h="77" shift="51" offset="0"/>
-    <glyph character="33" x="47" y="81" w="9" h="61" shift="17" offset="0"/>
-    <glyph character="68" x="55" y="2" w="43" h="61" shift="51" offset="0"/>
-    <glyph character="73" x="145" y="2" w="43" h="61" shift="51" offset="0"/>
-    <glyph character="79" x="100" y="2" w="43" h="61" shift="51" offset="0"/>
-    <glyph character="82" x="2" y="81" w="43" h="61" shift="51" offset="0"/>
-    <glyph character="83" x="190" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="33" x="272" y="145" w="9" h="61" shift="17" offset="0"/>
+    <glyph character="65" x="92" y="145" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="66" x="137" y="145" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="67" x="182" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="68" x="280" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="69" x="190" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="70" x="137" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="71" x="182" y="145" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="72" x="415" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="73" x="317" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="74" x="272" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="75" x="460" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="76" x="2" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="77" x="227" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="78" x="47" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="79" x="47" y="145" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="80" x="227" y="145" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="81" x="100" y="2" w="43" h="69" shift="51" offset="0"/>
+    <glyph character="82" x="2" y="145" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="83" x="325" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="84" x="452" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="85" x="370" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="86" x="145" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="87" x="362" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="88" x="407" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="89" x="92" y="82" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="90" x="235" y="2" w="43" h="61" shift="51" offset="0"/>
+    <glyph character="95" x="55" y="2" w="43" h="78" shift="51" offset="0"/>
   </glyphs>
   <kerningPairs/>
   <image>fntRoids.png</image>

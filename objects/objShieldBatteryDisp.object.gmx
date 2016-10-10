@@ -61,43 +61,25 @@ ini_close();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Shield Battery Display.
-// Set Shield Battery Display Colour.
+            <string>/// Draw Shield Battery Display.
+// Display Colour.
 draw_set_colour(intShieldBatteryDispColour);
-// Set Shield Battery Display Vertical Align.
+// Display Vertical Align.
 draw_set_valign(fa_middle);
-// Display Shield Battery Label.
+// Draw Label.
 draw_set_font(fntSml);
 draw_set_halign(fa_left);
-draw_text(room_width*0.05,room_height*0.95,"SHIELD");
-// Display Shield Battery Bar.
-var x1 = room_width*0.115;
-var y1 = room_height*0.945;
-var x2 = x1 + room_width*0.125;
-var y2 = y1 + room_height*0.01;
+var x1 = room_width*0.05;
+var y1 = room_height*0.95;
+draw_text(x1,y1,"SHIELD");
+// Draw Left Aligned Bar Gauge Relative to Label.
 var backCol = c_black;
 var minCol = intShieldBatteryDispMinColour;
 var maxCol = intShieldBatteryDispMaxColour;
 var dir = eHBAnchorDirNames.dirLeft;
 var showBack = false;
 var showBorder = false;
-draw_healthbar(x1,y1,x2,y2,health,backCol,minCol,maxCol,dir,showBack,showBorder);
-// Display Shield Battery Bar Tic Marks.
-y1 += room_height*0.01;
-y2 = y1 + room_height*0.005;
-y3 = y1 + room_height*0.01;
-// Draw Base Line.
-draw_line(x1,y3,x2,y3);
-// Draw End Tics.
-for (var x3=x1; x3&lt;x2; x3+=x2-x1) {
-    // Draw End Tic.
-    draw_line(x3,y1,x3,y3);
-}
-// Draw Quarter Tics.
-for (var x3=x1+(x2-x1)/4; x3&lt;=x2; x3+=(x2-x1)/4) {
-    // Draw Quarter Tic.
-    draw_line(x3,y2,x3,y3)
-}
+script_execute(scrDrawBarGauge,x1,y1,backCol,minCol,maxCol,dir,showBack,showBorder,health);
 
 </string>
           </argument>

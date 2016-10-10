@@ -5,66 +5,119 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sndBeat01</sound>
-    <sound>sound\sndBeat02</sound>
-    <sound>sound\sndEnemyBig</sound>
-    <sound>sound\sndEnemySml</sound>
-    <sound>sound\sndPlayerBulletFire</sound>
-    <sound>sound\sndPlayerEngineLoop</sound>
-    <sound>sound\sndPlayerExplosion</sound>
-    <sound>sound\sndPlayerShieldNak01</sound>
-    <sound>sound\sndPlayerShieldNak02</sound>
-    <sound>sound\sndPlayerShieldNak03</sound>
-    <sound>sound\sndRoidBig</sound>
-    <sound>sound\sndRoidMed</sound>
-    <sound>sound\sndRoidSml</sound>
+    <sounds name="grpsndsDeetDoot">
+      <sound>sound\sndBeat01</sound>
+      <sound>sound\sndBeat02</sound>
+    </sounds>
+    <sounds name="grpsndsPlayer">
+      <sound>sound\sndPlayerEngLoop</sound>
+      <sound>sound\sndPlayerExplosion</sound>
+      <sounds name="grpsndsPlayerShield">
+        <sound>sound\sndPlayerShldNak01</sound>
+        <sound>sound\sndPlayerShldNak02</sound>
+        <sound>sound\sndPlayerShldNak03</sound>
+      </sounds>
+      <sounds name="grpsndsPlayerGun">
+        <sound>sound\sndPlayerBulletFire</sound>
+      </sounds>
+    </sounds>
+    <sounds name="grpsndsRoid">
+      <sound>sound\sndRoidBig</sound>
+      <sound>sound\sndRoidMed</sound>
+      <sound>sound\sndRoidSml</sound>
+    </sounds>
+    <sounds name="grpsndsEnemy">
+      <sound>sound\sndEnemyBig</sound>
+      <sound>sound\sndEnemySml</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprBullet</sprite>
-    <sprite>sprites\sprLife</sprite>
-    <sprite>sprites\sprPlayerEngineOff</sprite>
-    <sprite>sprites\sprPlayerEngineOn</sprite>
-    <sprite>sprites\sprPlayerExplosion</sprite>
-    <sprite>sprites\sprPlayerShield</sprite>
-    <sprite>sprites\sprRoidBig</sprite>
-    <sprite>sprites\sprRoidMed</sprite>
-    <sprite>sprites\sprRoidSml</sprite>
+    <sprites name="grpsprsPlayer">
+      <sprite>sprites\sprLife</sprite>
+      <sprite>sprites\sprPlayerEngineOff</sprite>
+      <sprite>sprites\sprPlayerEngineOn</sprite>
+      <sprite>sprites\sprPlayerExplosion</sprite>
+      <sprites name="grpsprsPlayerShield">
+        <sprite>sprites\sprPlayerShield</sprite>
+      </sprites>
+      <sprites name="grpsprsPlayerGun">
+        <sprite>sprites\sprBullet</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="grpsprsRoid">
+      <sprite>sprites\sprRoidBig</sprite>
+      <sprite>sprites\sprRoidMed</sprite>
+      <sprite>sprites\sprRoidSml</sprite>
+    </sprites>
+    <sprites name="grpsprsEnemy">
+      <sprite>sprites\sprEnemyBig</sprite>
+      <sprite>sprites\sprEnemySml</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgSpacefield01</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scrOverridePlayerInvTmr.gml</script>
-    <script>scripts\scrSpawnRoids.gml</script>
+    <scripts name="grpscrsGameOver">
+      <scripts name="grpscrsGetPlayerNameDisp">
+        <script>scripts\scrAddHighScorePlayerName.gml</script>
+        <script>scripts\scrGetNextChar.gml</script>
+        <script>scripts\scrGetPrevChar.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="grpscrsGame">
+      <script>scripts\scrSpawnRoids.gml</script>
+    </scripts>
+    <scripts name="grpscrsPlayer">
+      <script>scripts\scrOverridePlayerInvTmr.gml</script>
+    </scripts>
+    <scripts name="grpscrsDrawBarGauge">
+      <script>scripts\scrDrawBarGauge.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fntBig</font>
     <font>fonts\fntRoids</font>
+    <font>fonts\fntBig</font>
     <font>fonts\fntSml</font>
   </fonts>
   <objects name="objects">
-    <object>objects\objInit</object>
-    <object>objects\objGameOver</object>
-    <object>objects\objMasterVolDisp</object>
-    <object>objects\objGameOverDisp</object>
-    <object>objects\objHighScoresDisp</object>
-    <object>objects\objGame</object>
-    <object>objects\objScoreDisp</object>
-    <object>objects\objNumShipsDisp</object>
-    <object>objects\objHighScoreDisp</object>
-    <object>objects\objDeetDoot</object>
-    <object>objects\objPlayerName</object>
-    <object>objects\objPlayer</object>
-    <object>objects\objPlayerExplosion</object>
-    <object>objects\objPlayerShield</object>
-    <object>objects\objShieldBatteryDisp</object>
-    <object>objects\objPlayerGun</object>
-    <object>objects\objBullet</object>
-    <object>objects\objRoid</object>
-    <object>objects\objRoidBig</object>
-    <object>objects\objRoidMed</object>
-    <object>objects\objRoidSml</object>
+    <objects name="grpobjsMCP">
+      <object>objects\objMCP</object>
+      <object>objects\objGameWinStyleDisp</object>
+      <object>objects\objMasterVolDisp</object>
+    </objects>
+    <objects name="grpobjsGameOver">
+      <object>objects\objGameOver</object>
+      <object>objects\objGetPlayerNameDisp</object>
+      <object>objects\objGameOverDisp</object>
+      <object>objects\objHighScoresDisp</object>
+    </objects>
+    <objects name="grpobjsGamePlaying">
+      <object>objects\objGamePlaying</object>
+      <object>objects\objScoreDisp</object>
+      <object>objects\objNumShipsDisp</object>
+      <object>objects\objHighScoreDisp</object>
+      <object>objects\objDeetDoot</object>
+    </objects>
+    <objects name="grpobjsPlayer">
+      <object>objects\objPlayer</object>
+      <object>objects\objPlayerExplosion</object>
+      <objects name="grpobjsPlayerShield">
+        <object>objects\objPlayerShield</object>
+        <object>objects\objShieldBatteryDisp</object>
+      </objects>
+      <objects name="grpobjsPlayerGun">
+        <object>objects\objPlayerGun</object>
+        <object>objects\objBullet</object>
+      </objects>
+    </objects>
+    <objects name="grpobjsRoid">
+      <object>objects\objRoid</object>
+      <object>objects\objRoidBig</object>
+      <object>objects\objRoidMed</object>
+      <object>objects\objRoidSml</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmGame</room>
