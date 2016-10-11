@@ -1,4 +1,4 @@
-/// Set Next Character at Player Name Character Position.
+/// Get Next Character at Character Position.
 // Character Position = SAVE?
 if (intCharPos != array_length_1d(astrCharPosInd)-1) {
     // No, Get Current Character.

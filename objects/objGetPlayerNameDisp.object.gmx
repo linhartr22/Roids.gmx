@@ -486,6 +486,42 @@ intCharASCIIMax = ord("Z");
     <event eventtype="7" enumb="3">
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Write Config Values to INI File.
+// Open Config INI File.
+ini_open(game_project_name + ".ini");
+// Use Object Name for INI File Section.
+var strObjName = object_get_name(object_index);
+// Write Display Colour.
+ini_write_real(strObjName,"intDispColour",intDispColour);
+// Write Player Name.
+ini_write_string(strObjName,"strPlayerName",strPlayerName);
+// Write Keypress Repeat Timer Steps Initial.
+ini_write_real(strObjName,"fltKeyRepeatTmrStepsInit",fltKeyRepeatTmrStepsInit);
+// Write Keypress Repeat Timer Steps Repeat.
+ini_write_real(strObjName,"fltKeyRepeatTmrStepsRep",fltKeyRepeatTmrStepsRep);
+// Close Config INI File.
+ini_close();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>605</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -564,19 +600,23 @@ intCharASCIIMax = ord("Z");
             <kind>1</kind>
             <string>/// Draw Get Player Name Display.
 // Display Colour.
-draw_set_colour(intGetPlayerNameDispColour);
-// Set Get Player Name Display Vertical Align.
+draw_set_colour(intDispColour);
+// Display Vertical Align.
 draw_set_valign(fa_middle);
-// Display High Score!
+// Draw Label.
 draw_set_font(fntRoids);
 draw_set_halign(fa_center);
-draw_text(room_width/2,room_height*0.20,"HIGH SCORE!");
-// Display Player Name.
+var x1 = room_width*0.50;
+var y1 = room_height*0.20;
+draw_text(x1,y1,"HIGH SCORE!");
+// Draw Player Name.
 draw_set_font(fntRoids);
 draw_set_halign(fa_center);
-draw_text(room_width/2,room_height*0.35,strPlayerName + " SAVE");
-// Display Character Position Indicator.
-draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
+y1 += room_height*0.15;
+var y2 = y1+room_height*0.005;
+draw_text(x1,y1,strPlayerName + " SAVE");
+// Draw Character Position Indicator.
+draw_text(x1,y2,astrCharPosInd[intCharPos]);
 
 </string>
           </argument>
@@ -600,7 +640,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Set Previous Character at Player Name Character Position.</string>
+            <string>Set Previous Character at Character Position.</string>
           </argument>
         </arguments>
       </action>
@@ -660,7 +700,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Start Key Press Repeat Timer.</string>
+            <string>Start Keypress Repeat Timer.</string>
           </argument>
         </arguments>
       </action>
@@ -680,7 +720,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>fltKeyPressRepeatTmrStepsInit</string>
+            <string>fltKeyRepeatTmrStepsInit</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -752,7 +792,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Set Next Character at Player Name Character Position.</string>
+            <string>Get Next Character at Character Position.</string>
           </argument>
         </arguments>
       </action>
@@ -812,7 +852,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Start Key Press Repeat Timer.</string>
+            <string>Start Keypress Repeat Timer.</string>
           </argument>
         </arguments>
       </action>
@@ -832,7 +872,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>fltKeyPressRepeatTmrStepsInit</string>
+            <string>fltKeyRepeatTmrStepsInit</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -966,7 +1006,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Update High Score and Player Name.</string>
+            <string>Yes, Update High Score and Player Name.</string>
           </argument>
         </arguments>
       </action>
@@ -1026,7 +1066,7 @@ draw_text(room_width/2,room_height*0.355,astrCharPosInd[intCharPos]);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Yes, Transition Get Player Name Display to Game Over Display.</string>
+            <string>Transition Get Player Name Display to Game Over Display.</string>
           </argument>
         </arguments>
       </action>
@@ -1188,7 +1228,7 @@ event_perform(ev_keypress,vk_right);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Stop Key Press Repeat Timer.</string>
+            <string>Stop Keypress Repeat Timer.</string>
           </argument>
         </arguments>
       </action>
@@ -1234,7 +1274,7 @@ event_perform(ev_keypress,vk_right);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Stop Key Press Repeat Timer.</string>
+            <string>Stop Keypress Repeat Timer.</string>
           </argument>
         </arguments>
       </action>

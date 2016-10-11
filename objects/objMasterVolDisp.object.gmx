@@ -195,7 +195,7 @@ draw_set_valign(fa_middle);
 // Draw Label.
 draw_set_font(fntSml);
 draw_set_halign(fa_center);
-var x1 = room_width*0.5;
+var x1 = room_width*0.50;
 var y1 = room_height*0.65;
 draw_text(x1,y1,"VOLUME");
 // Draw Center Aligned Bar Gauge Relative to Label.
@@ -205,7 +205,7 @@ var maxCol = intMasterVolDispColour;
 var dir = eHBAnchorDirNames.dirLeft;
 var showBack = false;
 var showBorder = false;
-script_execute(scrDrawBarGauge,x1-room_width*0.1,y1,backCol,minCol,maxCol,directory_create,showBack,showBorder,audio_get_master_gain(0)*100);
+script_execute(scrDrawBarGauge,x1-room_width*0.10,y1,backCol,minCol,maxCol,directory_create,showBack,showBorder,audio_get_master_gain(0)*100);
 
 </string>
           </argument>

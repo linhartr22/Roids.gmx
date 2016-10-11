@@ -5,22 +5,24 @@
 \cf2\b Date \cf3\b0 : September 11, 2016\par
 \cf2\b Author \cf3\b0 : Roger D. Linhart.\par
 \par
-\cf1\b Description\cf3\b0\par
-The goal of this exercise is to achieve a high score by destroying Roids!\par
+\cf1\b ===================================================================================\par
+Description\cf3\b0\par
+The goal of this simulator is to achieve a high score by destroying Roids!\par
 \par
-You have been supplied three ships. Each ship can rotate left and right and thrust in the direction it is pointed. Station keeping thrusters will slowly reduce its speed, eventually bringing it to a full stop.\par
+You have been supplied three ships. Ships can rotate left and right. Firing the main engine applies thrusts in the direction the ship is pointed. Station keeping thrusters will slowly reduce its speed, eventually bringing the ship to a full stop.\par
 \par
-Each ship is equipped with a shield that provides temporary invulnerability. The shield is powered by a battery. Activating the shield drains the battery quickly and it recharges slowly so use it sparingly. If you discharge the battery too far the shield will not activate again until the battery has sufficiently recovered. \par
+Each ship is equipped with a shield that provides temporary invulnerability. The shield is powered by a battery. Activating the shield drains the battery quickly. When the shield is deactivated the battery slowly recharges. If you discharge the battery too far the shield will not activate again until the battery is sufficiently recharged. \par
 \par
-Each ship is equipped with a main gun that fires a bullet in the same direction the ship faces. The main gun has an unlimited supply of bullets but the ship's tracking computer will limit the number of bullets it can fire. The tracking computer uses the bullet self-destruct mechanism to limit their range. This reduces the tracking computer power requirements and keeps the ship from taking one of its own bullets up the tailpipe.\par
+Each ship is equipped with a main gun that fires a bullet in the same direction the ship faces. The main gun has an unlimited supply of bullets but the ship's tracking computer will limit the number of bullets it can fire. The tracking computer uses a bullet self-destruct mechanism to limit their range. This reduces the tracking computer power requirements and keeps the ship from taking one of its own bullets up the tailpipe.\par
 \par
-Hitting a Roid with a bullet or, while not recommended, with the ship, results in the destruction of both and increases your score. Larger Roids are less challenging to hit and grant a smaller reward. Hitting a Roid splits it into two smaller Roids. Eventually a Roid becomes so small it is completely vaporized.\par
+Hitting a Roid with a bullet or, while not recommended, with a ship, results in the destruction of both and increases your score. Larger Roids are less challenging to hit and grant a smaller reward. Hitting a Roid splits it into two smaller Roids. Eventually a Roid becomes so small it is completely vaporized.\par
 \par
-When all the Roids are destroyed the ship will be warped to the next sector. As the warp envelope dissipates, the ship experiences momentarily invulnerability. During this time watch for opportunities to manuever the ship to a clear area, preventing a reentry collision. The effect dissipates eventually or immediately if you fire your main engine or main gun or activate the shield. You'll notice each sector begins with more Roids than its predecessor. \par
+When all the Roids are destroyed the ship will be warped to the next sector. As the warp envelope dissipates, the ship experiences momentary invulnerability. During this time watch for opportunities to manuever the ship to a clear area, preventing a reentry collision. The effect dissipates quickly or immediately if you fire the main engine or main gun or activate the shield. You'll notice each sector begins with more Roids than its predecessor. \par
 \par
 If a ship is destroyed and you have exhausted your supply of ships the game is over. Otherwise another ship will warp to the predecessor's location. \par
 \par
-\cf1\b Controls\par
+\cf1\b ===================================================================================\par
+Controls\par
 \cf4 In Game\cf1\par
 \cf2 <Left>\cf3\b0\tab\tab\tab\tab Rotate Ship Counter-Clockwise.\cf2\b\par
 <Right>\cf3\b0\tab\tab\tab Rotate Ship Clockwise.\cf2\b\par
@@ -38,11 +40,13 @@ If a ship is destroyed and you have exhausted your supply of ships the game is o
 <Down>\cf3\b0\tab\tab\tab Select Previous Character.\cf2\b\par
 <Space>\cf3\b0\tab\tab\tab Accept Entry at Position.\cf2\b\par
 \cf1\par
+===================================================================================\par
 Rooms\par
 \cf5 rmGame\cf3\b0\tab\tab\tab\cf6 Roid Game Initial Room.\par
 \cf4\b Objects\cf2\tab\cf3\b0\tab\tab\tab\cf5\b obj_MCP\cf6\b0\par
 \par
-\cf1\b Sprites\cf7\par
+\cf1\b ===================================================================================\par
+Sprites\cf7\par
 \cf5 sprLife\cf3\b0\tab\tab\tab\tab\cf6 Life Counter Display.\par
 \cf5\b sprPlayerEngineOff\cf3\b0\tab\tab\cf6 Player Engine Off Loop.\par
 \cf5\b sprPlayerEngineOn\cf3\b0\tab\tab\cf6 Player Engine On Loop.\par
@@ -55,7 +59,8 @@ Rooms\par
 \cf5\b sprEnemyBig\cf3\b0\tab\tab\tab\cf6 Big Enemy.\par
 \cf5\b sprEnemySml\cf3\b0\tab\tab\tab\cf6 Small Enemy.\par
 \par
-\cf1\b Sounds\cf6\b0\par
+\cf1\b ===================================================================================\par
+Sounds\cf6\b0\par
 \cf5\b sndBeat01\cf3\b0\tab\tab\tab\cf6 DeetDoot.\cf2\b\par
 \cf5 sndBeat02\cf3\b0\tab\tab\tab\cf6 DeetDoot.\cf2\b\par
 \cf5 sndPlayerEngLoop\cf3\b0\tab\tab\cf6 Player Engine On Loop.\par
@@ -70,9 +75,11 @@ Rooms\par
 \cf5\b sndEnemyBig\cf3\b0\tab\tab\tab\cf6 Big Enemy.\par
 \cf5\b sndEnemySml\cf3\b0\tab\tab\tab\cf6 Small Enemy.\par
 \par
-\cf1\b Backgrounds\cf6\b0\par
+\cf1\b ===================================================================================\par
+Backgrounds\cf6\b0\par
 \cf5\b bgSpacefield01\cf3\b0\tab\tab\cf6 Game Background.\par
 \cf1\b\par
+===================================================================================\par
 Scripts\par
 \cf8 scrAddHighScorePlayerName\cf3\b0\tab\cf6 Add High Score and Player Name to Highscores.\cf1\b\par
 \cf8 scrPlayerNameNextChar\cf3\b0\tab\cf6 Set Next Character at Character Position.\cf1\b\par
@@ -80,13 +87,17 @@ Scripts\par
 \cf8\b scrSpawnRoids\cf3\b0\tab\tab\cf6 Set Next Character at Character Position.\cf1\b\par
 \cf8 scrOverridePlayerInvTmr\cf3\b0\tab\cf6 Override Player Invincible Timer.\cf1\b\par
 \par
+===================================================================================\par
 Fonts\cf6\b0\par
 \cf5\b fntRoids\cf3\b0\tab\tab\tab\cf6 Huge Font.\par
 \cf5\b frnBig\cf3\b0\tab\tab\tab\tab Big \cf6 Font.\par
 \cf5\b fntSml\cf3\b0\tab\tab\tab\tab Small Font.\cf6\par
 \par
-\cf1\b Objects\par
-\cf5 objMCP\cf3\b0\tab\tab\tab\cf6 Master Control Program (MCO (Master Control Object) just doesn't have the same zip to it).\cf4\b\par
+\cf1\b ===================================================================================\par
+Objects\par
+\cf5 ===================================================================================\par
+objMCP\cf3\b0\tab\tab\tab\cf6 Master Control Program (MCO (Master Control Object) just doesn't have the same \cf5\b\par
+\cf6\b0 zip to it).\cf4\b\par
 vars\cf3\b0\par
 \cf2\b eHBAnchorDirNames\cf3\b0\tab\tab Global Health Bar Anchor Direction Names\cf6 . \cf2\b dirLeft\cf3\b0 ,\cf2\b  dirRight\cf3\b0 ,\cf2\b  dirTop\cf3\b0 ,\cf2\b  dirBottom\cf6\b0 .\par
 \cf2\b score\cf3\b0\tab\tab\tab\tab GML \cf6 score.\cf4\b\par
@@ -109,7 +120,8 @@ Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
 \cf9\b Destroy\cf4\tab\cf3\b0\tab\tab\tab\cf6 Destroy Game Window Style Display.\par
 \cf3\tab\tab\tab\tab\cf6 Destroy Master Volume Display.\par
 \par
-\cf5\b objGameWinStyleDisp\tab\cf3\b0\tab Game Window Style Display.\par
+\cf5\b ===================================================================================\par
+objGameWinStyleDisp\tab\cf3\b0\tab Game Window Style Display.\par
 \cf4\b vars\cf6\b0\par
 \cf2\b boolGameWindowStyle\cf3\b0\tab Game Window Style. true = Fullscreen, false = Windowed.\cf2\b\par
 \cf4 Fonts\cf3\b0\tab\tab\tab\tab <None>.\par
@@ -129,7 +141,8 @@ Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
 \cf9\b press <Alt>+<PageUp>\cf3\b0\tab Set Game Window Style Fullscreen.\cf4\b\tab\tab\tab\cf2\par
 \cf9 press <Alt>+<PageDown>\cf3\b0\tab Set Game Window Style Windowed.\cf2\b\par
 \par
-\cf5 objMasterVolDisp\cf3\b0\tab\tab Master Volume Display.\par
+\cf5 ===================================================================================\par
+objMasterVolDisp\cf3\b0\tab\tab Master Volume Display.\par
 \cf4\b vars\cf6\b0\par
 \cf2\b fltAudioMasterGain\cf3\b0\tab\tab Audio Master Gain. 1 = Loudest, 0 = Silent.\cf2\b\par
 intDispColour\cf3\b0\tab\tab\tab Display Colour. \cf2\b c_white\cf3\b0 .\cf2\b\par
@@ -159,7 +172,8 @@ Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
 \tab\tab\tab\tab Set visible to true.\par
 \tab\tab\tab\tab Set Alarm 0 to Display Timer Steps Initial.\tab\tab\tab\tab\cf2\b\par
 \par
-\cf5 objGameOver\cf3\b0\tab\tab\tab\cf6 Game Over.\par
+\cf5 ===================================================================================\par
+objGameOver\cf3\b0\tab\tab\tab\cf6 Game Over.\par
 \cf4\b vars\cf6\b0\par
 \cf2\b highscore_value(10)\cf3\b0\tab\tab GML High Score Value Number 10.\cf2\b\par
 score\cf3\b0\tab\tab\tab\tab\cf6 GML score.\cf4\b\par
@@ -182,7 +196,8 @@ Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
 \cf9 press <Escape>\cf3\b0\tab\tab End the game.\cf2\b\par
 \cf9 press <S>\cf3\b0\tab\tab\tab Transition Game Over to Game Playing.\cf2\b\par
 \cf6\b0\par
-\cf5\b objGetPlayerNameDisp\cf3\b0\tab Get Player Name Display.\par
+\cf5\b ===================================================================================\par
+objGetPlayerNameDisp\cf3\b0\tab Get Player Name Display.\par
 \cf4\b vars\cf6\b0\par
 \cf2\b intDispColour\cf3\b0\tab\tab\tab Display Colour. \cf2\b c_white\cf3\b0 .\cf2\b\par
 strPlayerName\cf3\b0\tab\tab\tab Player Name. \cf2\b "AAA"\cf3\b0 .\cf2\b\par
@@ -193,8 +208,8 @@ astrCharPosInd[4]\cf3\b0\tab\tab Character Position Indicators.\cf2\b\par
 intCharASCIIMin\cf3\b0\tab\tab Character ASCII Min. \cf2\b "A"\cf3\b0 .\cf2\b\par
 intCharASCIIMax\cf3\b0\tab\tab Character ASCII Max. \cf2\b "Z"\cf3\b0 .\cf2\b\par
 score\cf3\b0\tab\tab\tab\tab\cf6 GML score.\cf4\b\par
-Fonts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
-Scripts\cf3\b0\tab\tab\tab\tab <None>.\cf4\b\par
+Fonts\cf3\b0\tab\tab\tab\tab\cf5\b fntRoids\cf3\b0 .\cf4\b\par
+Scripts\cf3\b0\tab\tab\tab\tab\cf8\b scrGetNextChar\cf3\b0 , \cf8\b scrGetPrevChar\cf3\b0 , \cf8\b scrAddHighScorePlayerName\cf3\b0 .\cf4\b\par
 Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
 \cf4\b Visible\cf3\b0\tab\tab\tab\tab\cf6 false.\par
 \cf4\b Persistent\cf3\b0\tab\tab\tab\cf6 false.\par
@@ -210,10 +225,47 @@ Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
 \cf9\b Alarm 0\cf3\b0\tab\tab\tab Keypress Repeat Timer.\par
 \tab\tab\tab\tab If <Up> Key Pressed Then Get Next Character at Character Position.\par
 \tab\tab\tab\tab Else If <Down> Key Pressed Then Get Previous Character at Character Position.\par
-\tab\tab\tab\tab Set Alarm 0 to \cf5\b\par
-\cf9 Game End\cf3\b0\tab\tab\tab Add High Score with Player Name.\cf2\b\par
-\cf9 press <S>\cf3\b0\tab\tab\tab Transition Game Over to Game Playing.\cf2\b\par
-\cf5\par
+\tab\tab\tab\tab Set Alarm 0 to Keypress Repeat Timer Steps Repeat.\cf5\b\par
+\cf9 Game End\cf3\b0\tab\tab\tab Write Config Values to INI File.\par
+\tab\tab\tab\tab Add High Score with Player Name.\cf2\b\par
+\cf9 Draw\cf3\b0\tab\tab\tab\tab Draw Get Player Name Display.\cf9\b\par
+press <Space>\cf3\b0\tab\tab\tab If Character Position is SAVE Then Update High Score and Player Name and \par
+\tab\tab\tab\tab Transition Get Player Name Display to Game Over Display.\par
+\tab\tab\tab\tab Else Execute Keypress <Right> event.\par
+\cf9\b press <Left>\cf3\b0\tab\tab\tab Move Character Position Indicator Left.\par
+\cf9\b press <Up>\cf3\b0\tab\tab\tab Get Next Character at Character Position.\par
+\tab\tab\tab\tab Start Keypress Repeat Timer.\par
+\cf9\b press <Right>\cf3\b0\tab\tab\tab Move Character Position Indicator Right.\par
+\cf9\b press <Down>\cf3\b0\tab\tab\tab Get Previous Character at Character Position.\par
+\tab\tab\tab\tab Start Keypress Repeat Timer. \par
+\cf9\b release <Up>\cf3\b0\tab\tab\tab Stop Keypress Repeat Timer.\par
+\cf9\b release <Down>\cf3\b0\tab\tab Stop Keypress Repeat Timer.\par
+\cf2\b\par
+\cf5 ===================================================================================\par
+objGameOverDisp\cf3\b0\tab\tab Game Over Display.\par
+\cf4\b vars\cf6\b0\par
+\cf2\b intDispColour\cf3\b0\tab\tab\tab Display Colour. \cf2\b c_white\cf3\b0 .\cf2\b\par
+strPlayerName\cf3\b0\tab\tab\tab Player Name. \cf2\b "AAA"\cf3\b0 .\cf2\b\par
+fltKeyRepeatTmrStepsInit\cf3\b0\tab Keypress Repeat Timer Steps Initial. \cf2\b 30\cf3\b0 .\cf2\b\par
+fltKeyRepeatTmrStepsRep\cf3\b0\tab Keypress Repeat Timer Steps Repeat. \cf2\b 7\cf3\b0 .\cf2\b\par
+intCharPos\cf3\b0\tab\tab\tab Character Position. \cf2\b 0\cf3\b0 .\cf2\b\par
+astrCharPosInd[4]\cf3\b0\tab\tab Character Position Indicators.\cf2\b\par
+intCharASCIIMin\cf3\b0\tab\tab Character ASCII Min. \cf2\b "A"\cf3\b0 .\cf2\b\par
+intCharASCIIMax\cf3\b0\tab\tab Character ASCII Max. \cf2\b "Z"\cf3\b0 .\cf2\b\par
+score\cf3\b0\tab\tab\tab\tab\cf6 GML score.\cf4\b\par
+Fonts\cf3\b0\tab\tab\tab\tab\cf5\b fntRoids\cf3\b0 .\cf4\b\par
+Scripts\cf3\b0\tab\tab\tab\tab\cf8\b scrGetNextChar\cf3\b0 , \cf8\b scrGetPrevChar\cf3\b0 , \cf8\b scrAddHighScorePlayerName\cf3\b0 .\cf4\b\par
+Sprites\cf3\b0\tab\tab\tab\tab\cf6 <no sprite>.\par
+\cf4\b Visible\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Persistent\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Solid\cf3\b0\tab\tab\tab\tab\cf6 false.\par
+\cf4\b Uses Physics\cf3\b0\tab\tab\tab\cf6 false.\par
+\cf4\b Depth\cf3\b0\tab\tab\tab\tab\cf6 0.\par
+\cf4\b Parent\cf3\b0\tab\tab\tab\tab\cf6 <no parent>.\par
+\cf4\b Mask\cf3\b0\tab\tab\tab\tab\cf6 <same as sprite>.\par
+\cf4\b Children\cf3\b0\tab\tab\tab\cf6 <None>.\cf4\b\par
+\cf9 Create\cf3\b0\tab\tab\tab\tab Read Config Values from INI File.\par
+\cf5\b\par
 objScore \cf6\b0 : Player Score Display. Uses GM Score Actions.\par
 \tab\cf2\b Font \cf6\b0 : \cf2\b fntBig\cf6\b0 .\par
 \tab\cf2\b Depth \cf6\b0 : 10.\par
@@ -286,15 +338,8 @@ objScore \cf6\b0 : Player Score Display. Uses GM Score Actions.\par
   Create : Call the inherited event. Set Small Asteroid Score.\par
   Destroy : Call the inherited event. Play Small Asteroid Sound.\par
 \par
-\cf1\b Alarms\par
-\cf2 Alarm 0 \cf6\b0 : Main Gun Reload Delay (objMainGun)\par
-\cf2\b Alarm 1 \cf6\b0 : Bullet Distance (objBullet)\par
-\cf2\b Alarm 2 \cf6\b0 : Level Respawn Delay (objMCP)\par
-\cf2\b Alarm 3 \cf6\b0 : Ship Respawn Delay (objShipExplode)\par
-\par
-\cf1\b User Events\cf6\b0\par
-\par
 \cf1\b Misc\par
+===================================================================================\par
 \cf2 a \cf6\b0 : Array.\par
 \cf2\b alrm \cf6\b0 : Alarm Name.\par
 \cf2\b bg \cf6\b0 : Background Resource.\par
@@ -320,6 +365,7 @@ Important constants are typically defined in an objects Create event. Some const
 intFullScreen="0"\par
 \par
 \cf1\b Issues\cf6\b0\par
-\par
+\cf1\b ===================================================================================\par
+\cf6\b0\par
 }
  
